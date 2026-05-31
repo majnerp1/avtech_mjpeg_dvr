@@ -1,4 +1,4 @@
-"""Inicializace integrace AV-TECH MJPEG DVR přes Config Flow."""
+"""Inicializace integrace AV-TECH MJPEG DVR."""
 import logging
 
 _LOGGER = logging.getLogger(__name__)
