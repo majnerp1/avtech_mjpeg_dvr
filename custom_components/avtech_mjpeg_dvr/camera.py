@@ -1,8 +1,12 @@
+"""Podpora pro AV-TECH MJPEG DVR kamery přes čisté TCP sockety a asynchronní relace."""
 import logging
 import asyncio
 from homeassistant.components.camera import Camera
 
 _LOGGER = logging.getLogger(__name__)
+
+# TENTO ŘÁDEK JE PRO HOME ASSISTANT NAPROSTO KLÍČOVÝ:
+DOMAIN = "avtech_mjpeg_dvr"
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
     """Nastavení kamery z bezpečného grafického úložiště HA (Config Entry)."""
@@ -149,7 +153,8 @@ class AvtechPureMjpegCamera(Camera):
                 if b"\xff\xd8" in chunk:
                     parts = chunk.split(b"\xff\xd8", 1)
                     mjpeg_header = f"\r\nContent-Type: image/jpeg\r\n\r\n".encode('utf-8')
-                    chunk = parts + f"\r\n--{boundary}".encode('utf-8') + mjpeg_header + b"\xff\xd8" + parts
+                    # Správné asynchronní sestavení bytů v Pythonu:
+                    chunk = parts[0] + f"\r\n--{boundary}".encode('utf-8') + mjpeg_header + b"\xff\xd8" + parts[1]
 
                 await response.write(chunk)
                 
