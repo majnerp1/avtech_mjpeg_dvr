@@ -1,0 +1,16 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "AV-TECH MJPEG DVR",
+        "description": "Enter the network and login credentials of your DVR recorder.",
+        "data": {
+          "ip": "IP Address",
+          "port": "Communication port",
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    }
+  }
+}
