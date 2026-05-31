@@ -1,14 +1,10 @@
 {
+  "title": "AV-TECH MJPEG DVR",
   "config": {
     "step": {
       "user": {
-        "title": "AV-TECH MJPEG DVR",
-        "description": "Zadejte síťové a přihlašovací údaje vašeho DVR.",
         "data": {
-          "ip": "IP Adresa",
-          "port": "Port",
-          "username": "Uživatelské jméno",
-          "password": "Heslo"
+          "ip": "IP address"
         }
       }
     }
