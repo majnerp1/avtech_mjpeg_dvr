@@ -1,6 +1,7 @@
 {
   "domain": "avtech_mjpeg_dvr",
   "name": "AV-TECH MJPEG DVR",
+  "brand": "avtech",
   "codeowners": ["@majnerp1"],
   "config_flow": true,
   "dependencies": [],
