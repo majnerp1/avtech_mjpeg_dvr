@@ -1,10 +1,11 @@
 {
   "domain": "avtech_mjpeg_dvr",
   "name": "AV-TECH MJPEG DVR",
-  "codeowners": [],
+  "codeowners": ["@majnerp1"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "",
+  "documentation": "https://github.com",
+  "issue_tracker": "https://github.com/issues",
   "integration_type": "hardware",
   "iot_class": "local_polling",
   "requirements": [],
