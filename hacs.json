@@ -1,5 +1,5 @@
 {
   "name": "AV-TECH MJPEG DVR",
   "content_type": "integration",
-  "homeassistant": "2024.1.0"
+  "homeassistant": "2021.1.0"
 }
