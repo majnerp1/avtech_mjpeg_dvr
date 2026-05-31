@@ -1,0 +1,1 @@
+DOMAIN = "avtech_mjpeg_dvr"
